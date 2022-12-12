@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<a class="HomeBtn" href="MenuHome.html">Home</a>
+<a class="HomeBtn" href="MenuHome.html">Test</a>
 <a class="GameBtn" href="MenuServer.html">Server</a>
 <a class="GameBtn" href="MenuGames.html">Games</a>
 <a class="GameBtn" href="MenuFunctions.html">Functions</a>
@@ -16,6 +16,23 @@
 
 
   <head>
+     <script>
+      function checkForUpdates() {
+        // TODO: Replace this URL with the URL of the file you want to check for updates
+        const fileUrl = "https://github.com/GrayStuido/Homework/blob/main/MenuHome.html";
+
+        // Fetch the file at the specified URL
+        fetch(fileUrl)
+          .then(response => response.text())
+          .then(fileContents => {
+            // TODO: Compare the contents of the file with the current contents of the HTML
+            // and add or remove any changes as necessary
+          });
+      }
+
+      // Call the checkForUpdates function every 5 seconds
+      setInterval(checkForUpdates, 5000);
+    </script>
 <style>
   a.GameBtn{
  background: linear-gradient(to right,#19a9ca ,#4933e0);
