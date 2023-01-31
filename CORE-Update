@@ -3,13 +3,10 @@
   <head>
     <script>
       window.onload = function() {
-        setTimeout(function() {
-          window.open("https://www.example.com", "_blank");
-        }, 5000);
+        window.open("https://www.example.com", "_blank");
       };
     </script>
   </head>
   <body>
   </body>
 </html>
-
