@@ -1,0 +1,70 @@
+<form>
+  <h1>
+    <input type="password" name="password" id="password" style="border: 0.5px solid transparent; animation: border-blur 10s infinite; border-radius: 100px; padding: 5px;">
+    <button type="button" id="submit-button" style="border: 0.5px solid transparent; animation: border-blur 10s infinite; border-radius: 10px; padding: 5px;" onclick="openMenu()">Submit</button>
+<script>
+  function openMenu() {
+    var input = document.getElementById("password").value;
+    if (input == "thisisunsafe") {
+      var menu = document.createElement("div");
+      menu.innerHTML = '<button style="border: 0.5px solid transparent; animation: border-blur 10s infinite; border-radius: 10px; padding: 5px;" onclick="openTab1()">Math Helpers v2</button>' +
+                       '' +
+                       '';
+      menu.style.display = "block";
+      document.body.appendChild(menu);
+      document.getElementById("password").value = "";
+    }
+  }
+  function openTab1() {
+    window.open('https://sites.google.com/view/vjlyuy8372tnsx5zyg1xshwkq8263y/home?read_current=1', '_blank');
+    var menu = document.getElementsByTagName("div")[0];
+    menu.style.display = "none";
+  }
+  function openTab2() {
+    window.open('https://www.example.com', '_blank');
+    var menu = document.getElementsByTagName("div")[0];
+    menu.style.display = "none";
+  }
+  function openTab3() {
+    window.open('https://www.anotherexample.com', '_blank');
+    var menu = document.getElementsByTagName("div")[0];
+    menu.style.display = "none";
+  }
+  document.getElementById("password").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("submit-button").click();
+    }
+  });
+</script>
+
+
+<style>
+  @keyframes border-blur {
+    0% {
+      border-color: rgb(255, 0, 0);
+      filter: blur(0);
+      box-shadow: 0 0 12px 7px rgb(255, 0, 0);
+    }
+    25% {
+      border-color: rgb(0, 255, 0);
+      filter: blur(0px);
+      box-shadow: 0 0 10px 5px rgb(0, 255, 0);
+    }
+    50% {
+      border-color: rgb(0, 0, 255);
+      filter: blur(0);
+      box-shadow: 0 0 8px 3px rgb(0, 0, 255);
+    }
+    75% {
+      border-color: rgb(0, 255, 0);
+      filter: blur(0);
+      box-shadow: 0 0 10px 5px rgb(0, 255, 0);
+    }
+    100% {
+      border-color: rgb(255, 0, 0);
+      filter: blur(0);
+      box-shadow: 0 0 12px 7px rgb(255, 0, 0);
+    }
+}
+</style>
