@@ -15,11 +15,15 @@
       document.getElementById("password").value = "";
     }
   }
-  function openTab1() {
-    window.open('https://sites.google.com/view/vjlyuy8372tnsx5zyg1xshwkq8263y/home?read_current=1', '_blank');
-    var menu = document.getElementsByTagName("div")[0];
-    menu.style.display = "none";
-  }
+        function openTab1() {
+        fetch('https://raw.githubusercontent.com/GrayStuido/Homework/main/Current%20Website%20Link')
+          .then(response => response.text())
+          .then(text => {
+            window.open(text, '_blank');
+            var menu = document.getElementsByTagName("div")[0];
+            menu.style.display = "none";
+          });
+      }
   function openTab2() {
     window.open('https://www.example.com', '_blank');
     var menu = document.getElementsByTagName("div")[0];
