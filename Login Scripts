@@ -1,0 +1,15 @@
+<script>  function openMenu() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if (username == "admin" && password == "thisisunsafe") {
+      var menu = document.createElement("div");
+      menu.innerHTML = '<button style="border: 0.5px solid transparent; animation: border-blur 10s infinite; border-radius: 10px; padding: 5px;" onclick="openTab1()">Math Helpers v2</button>' +
+                       '' +
+                       '';
+      menu.style.display = "block";
+      document.body.appendChild(menu);
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+    }
+  }
+</script>
